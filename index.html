@@ -8,7 +8,7 @@
   </head>
   <body>
     <main class="app">
-      <h1>Shoin Timer</h1>
+      <h1 id="mode-title">Shoin Timer</h1>
 
       <section class="display-card" aria-live="polite">
         <p id="time-display">00:00:00</p>
@@ -18,6 +18,7 @@
         <button id="start-btn" class="btn primary">スタート</button>
         <button id="stop-btn" class="btn">ストップ</button>
         <button id="set-btn" class="btn accent">セット</button>
+        <button id="reset-btn" class="btn hidden">リセット</button>
       </section>
 
       <section id="set-panel" class="set-panel hidden" role="dialog" aria-modal="false" aria-labelledby="set-panel-title">
@@ -55,6 +56,11 @@
           <button id="reset-set" class="btn">00:00:00 に戻す</button>
         </div>
       </section>
+
+      <nav class="tabs" aria-label="モード切り替え">
+        <button id="tab-timer" class="tab active" aria-selected="true">Timer</button>
+        <button id="tab-stopwatch" class="tab" aria-selected="false">Shoin Stop Watch</button>
+      </nav>
     </main>
 
     <script src="script.js"></script>

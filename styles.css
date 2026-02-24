@@ -58,7 +58,8 @@ h1 {
 }
 
 .btn,
-.icon-btn {
+.icon-btn,
+.tab {
   border: 1px solid #fff;
   background: #fff;
   color: var(--main);
@@ -69,18 +70,9 @@ h1 {
 }
 
 .btn:hover,
-.icon-btn:hover {
+.icon-btn:hover,
+.tab:hover {
   opacity: 0.9;
-}
-
-.btn.primary {
-  background: #fff;
-  color: var(--main);
-}
-
-.btn.accent {
-  border-color: #fff;
-  color: var(--main);
 }
 
 .set-panel {
@@ -112,7 +104,6 @@ h1 {
 .set-panel-header h2 {
   margin: 0;
   font-size: 1rem;
-  color: #fff;
 }
 
 .icon-btn {
@@ -160,4 +151,21 @@ input[type='number'] {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
+}
+
+.tabs {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+}
+
+.tab {
+  background: transparent;
+  color: #fff;
+}
+
+.tab.active {
+  background: #fff;
+  color: var(--main);
 }
