@@ -8,17 +8,27 @@
   </head>
   <body>
     <main class="app">
+<<<<<<< codex/create-shoin-timer-stopwatch-app-zh9dgl
       <h1 id="mode-title">Shoin Timer</h1>
 
       <section class="display-card" aria-live="polite">
         <p id="time-display">00:00:00</p>
+=======
+      <h1>Shoin Timer</h1>
+
+      <section class="display-card" aria-live="polite">
+        <p id="time-display">00:00:00.0</p>
+>>>>>>> main
       </section>
 
       <section class="controls" aria-label="タイマー操作">
         <button id="start-btn" class="btn primary">スタート</button>
         <button id="stop-btn" class="btn">ストップ</button>
         <button id="set-btn" class="btn accent">セット</button>
+<<<<<<< codex/create-shoin-timer-stopwatch-app-zh9dgl
         <button id="reset-btn" class="btn hidden">リセット</button>
+=======
+>>>>>>> main
       </section>
 
       <section id="set-panel" class="set-panel hidden" role="dialog" aria-modal="false" aria-labelledby="set-panel-title">
@@ -28,6 +38,7 @@
         </header>
 
         <div class="slider-group">
+<<<<<<< codex/create-shoin-timer-stopwatch-app-zh9dgl
           <label for="hour-slider">時</label>
           <div class="input-row">
             <input id="hour-slider" type="range" min="0" max="99" value="0" />
@@ -49,6 +60,20 @@
             <input id="second-slider" type="range" min="0" max="59" value="0" />
             <input id="second-input" type="number" min="0" max="59" value="0" inputmode="numeric" />
           </div>
+=======
+          <label for="hour-slider">時 <span id="hour-value">0</span></label>
+          <input id="hour-slider" type="range" min="0" max="99" value="0" />
+        </div>
+
+        <div class="slider-group">
+          <label for="minute-slider">分 <span id="minute-value">0</span></label>
+          <input id="minute-slider" type="range" min="0" max="59" value="0" />
+        </div>
+
+        <div class="slider-group">
+          <label for="second-slider">秒 <span id="second-value">0</span></label>
+          <input id="second-slider" type="range" min="0" max="59" value="0" />
+>>>>>>> main
         </div>
 
         <div class="panel-actions">
@@ -56,11 +81,14 @@
           <button id="reset-set" class="btn">00:00:00 に戻す</button>
         </div>
       </section>
+<<<<<<< codex/create-shoin-timer-stopwatch-app-zh9dgl
 
       <nav class="tabs" aria-label="モード切り替え">
         <button id="tab-timer" class="tab active" aria-selected="true">Timer</button>
         <button id="tab-stopwatch" class="tab" aria-selected="false">Shoin Stop Watch</button>
       </nav>
+=======
+>>>>>>> main
     </main>
 
     <script src="script.js"></script>
