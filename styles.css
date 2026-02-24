@@ -1,0 +1,147 @@
+:root {
+  --main: #005200;
+  --main-soft: #0a6d0a;
+  --bg: #f4f8f3;
+  --text: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: linear-gradient(165deg, #ffffff, var(--bg));
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.app {
+  width: min(560px, 92vw);
+  padding: 2rem;
+  border: 2px solid var(--main);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 16px 34px rgba(0, 82, 0, 0.15);
+  position: relative;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  text-align: center;
+  color: var(--main);
+}
+
+.display-card {
+  border: 2px solid var(--main-soft);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: #f7fff7;
+}
+
+#time-display {
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  letter-spacing: 0.06em;
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.controls {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn,
+.icon-btn {
+  border: 1px solid var(--main);
+  background: #fff;
+  color: var(--main);
+  border-radius: 999px;
+  padding: 0.58rem 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover,
+.icon-btn:hover {
+  background-color: #ecfcec;
+}
+
+.btn.primary {
+  background: var(--main);
+  color: #fff;
+}
+
+.btn.accent {
+  border-color: var(--main-soft);
+  color: var(--main-soft);
+}
+
+.set-panel {
+  width: min(400px, 88vw);
+  position: absolute;
+  top: calc(100% + 0.8rem);
+  right: 0;
+  background: #fff;
+  border: 2px solid var(--main);
+  border-radius: 0.8rem;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 0.9rem 1rem;
+  z-index: 10;
+}
+
+.hidden {
+  display: none;
+}
+
+.set-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+  user-select: none;
+}
+
+.set-panel-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--main);
+}
+
+.icon-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  line-height: 1;
+  padding: 0;
+}
+
+.slider-group {
+  margin-top: 0.6rem;
+}
+
+.slider-group label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--main);
+}
+
+.panel-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
