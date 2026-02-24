@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoin Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Shoin Timer</h1>
+
+      <section class="display-card" aria-live="polite">
+        <p id="time-display">00:00:00</p>
+      </section>
+
+      <section class="controls" aria-label="タイマー操作">
+        <button id="start-btn" class="btn primary">スタート</button>
+        <button id="stop-btn" class="btn">ストップ</button>
+        <button id="set-btn" class="btn accent">セット</button>
+      </section>
+
+      <section id="set-panel" class="set-panel hidden" role="dialog" aria-modal="false" aria-labelledby="set-panel-title">
+        <header id="set-panel-header" class="set-panel-header">
+          <h2 id="set-panel-title">時・分・秒をセット</h2>
+          <button id="close-set-panel" class="icon-btn" aria-label="セットパネルを閉じる">×</button>
+        </header>
+
+        <div class="slider-group">
+          <label for="hour-slider">時</label>
+          <div class="input-row">
+            <input id="hour-slider" type="range" min="0" max="99" value="0" />
+            <input id="hour-input" type="number" min="0" max="99" value="0" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="slider-group">
+          <label for="minute-slider">分</label>
+          <div class="input-row">
+            <input id="minute-slider" type="range" min="0" max="59" value="0" />
+            <input id="minute-input" type="number" min="0" max="59" value="0" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="slider-group">
+          <label for="second-slider">秒</label>
+          <div class="input-row">
+            <input id="second-slider" type="range" min="0" max="59" value="0" />
+            <input id="second-input" type="number" min="0" max="59" value="0" inputmode="numeric" />
+          </div>
+        </div>
+
+        <div class="panel-actions">
+          <button id="apply-set" class="btn primary">反映</button>
+          <button id="reset-set" class="btn">00:00:00 に戻す</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
